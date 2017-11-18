@@ -1,0 +1,10 @@
+.data
+    userInput: .space 1001    #Allocates space for user entered string
+    
+.text
+  main:
+      li $v0, 8
+      la $t0, userInput       #allocates space for string
+      la $a0, ($t0)           #loads address of userInput in $t0 to argument register $a0
+      la $a1, 1001            #grabs length of space in userInput to limit
+      syscall                 #Executes code segment
