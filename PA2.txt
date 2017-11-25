@@ -1,6 +1,7 @@
 .data
     userInput: .space 1001    #Allocates space for user entered string
-    
+    invalidInput:               #Stores charectar sequence to prompt if userInput is invalid
+              .asciiz "Invalid hexadecimal number."
 .text
   main:
       li $v0, 8
@@ -8,3 +9,14 @@
       la $a0, ($t0)           #loads address of userInput in $t0 to argument register $a0
       la $a1, 1001            #grabs length of space in userInput to limit
       syscall                 #Executes code segment
+      
+      addi $t7, $t0, 1000            #adds the value of the 9th byte of userInput to the register $t7
+      addi $s5, $t0, 0               #copy of $t0
+ 
+check_length:                       #Counts length of userInput
+       lb $t1, 0($s5)
+       beq $t1, 0, sub_four
+       beq $t1, 10, sub_four
+       addi $s3, $s3, 4
+       addi $s5, $s5, 1
+       j check_length
