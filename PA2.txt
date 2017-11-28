@@ -36,6 +36,28 @@ check_length:                       #Counts length of userInput
 		}
 		j++ 
 }
+
+#Subprogram 1
+SubProg1(char, position)	#program to get value of substring
+{
+	if (position == 1)		
+	{
+		return hex_value
+	}
+if (char is valid hex)
+{
+	return hex_value shifted by shift_amount
+	#value  shifted left by (position - 1) * 4
+}
+else
+{
+		return “NaN”
+	}
+
+}
+
+
+#Subprogram 2
 Sub-Program2(arr, i, j)	#program to calculate value of substring
 {
 	shift_position = j - i		#gets length of string
