@@ -20,3 +20,20 @@ check_length:                       #Counts length of userInput
        addi $s3, $s3, 4
        addi $s5, $s5, 1
        j check_length
+       
+ #Pseudocode for main
+ char arr[1001] = input()		#read the string
+	i = 0		#starting index of substring
+	j = 0		#ending index of substring
+	substr_value = 0	
+    or char in arr:
+		if (char == “,”) | (char == NULL) | (char == ‘NL’)
+		{
+			substr_value = SubProg2(arr, i, j) #returns value of substring
+			i = j + 2			#plus 2 to skip comma and space
+			j = j + 2
+			SubProg3(substr_value)	#prints substring value
+		}
+		j++ 
+}
+
