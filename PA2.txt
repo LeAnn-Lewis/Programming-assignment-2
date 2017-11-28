@@ -36,4 +36,22 @@ check_length:                       #Counts length of userInput
 		}
 		j++ 
 }
+Sub-Program2(arr, i, j)	#program to calculate value of substring
+{
+	shift_position = j - i		#gets length of string
+sum = 0
+	if (shift_position > 8)	#when more than 32 bits it is too large
+	{
+		return “Too large”
+	}
+	while (i < j):
+		sum += SubProg1(arr[i], shift_position)	#increments sum
+		if (sum is “NaN”)
+		{
+			return “NaN”
+		}
+		i++				
+		shift_position--
+	return sum
+}
 
