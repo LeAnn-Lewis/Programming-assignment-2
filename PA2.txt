@@ -76,4 +76,10 @@ sum = 0
 		shift_position--
 	return sum
 }
+#subprogram 3
+
+SubProg3(number)		#program to print a value
+{
+	print(number)
+}
 
