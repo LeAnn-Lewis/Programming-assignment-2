@@ -81,5 +81,5 @@ sum = 0
 SubProg3(number)		#program to print a value
 {
 	print(number)
-}
+} 
 
