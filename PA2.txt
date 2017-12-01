@@ -4,6 +4,7 @@
               .asciiz "Invalid hexadecimal number."
 .text
   main:
+      addi 
       li $v0, 8
       la $t0, userInput       #allocates space for string
       la $a0, ($t0)           #loads address of userInput in $t0 to argument register $a0
@@ -21,7 +22,7 @@ check_length:                       #Counts length of userInput
        addi $s5, $s5, 1
        j check_length
        
- #Pseudocode for main
+ #Pseudocode for main in C++
  char arr[1001] = input()		#read the string
 	i = 0		#starting index of substring
 	j = 0		#ending index of substring
@@ -58,7 +59,7 @@ else
 
 
 #Subprogram 2
-Sub-Program2(arr, i, j)	#program to calculate value of substring
+Sub-Program2(arr, i, j)	#program to calculate the value of a substring
 {
 	shift_position = j - i		#gets length of string
 sum = 0
